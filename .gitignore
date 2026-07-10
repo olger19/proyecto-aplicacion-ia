@@ -1,0 +1,24 @@
+# Python Virtual Environment & Cache
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+
+# Node / Frontend Build & Modules
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.eslintcache
+
+# IDEs, Editors & OS Files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
