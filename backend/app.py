@@ -3,9 +3,11 @@ import json
 import io
 import numpy as np
 from PIL import Image
+# pyrefly: ignore [missing-import]
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import tensorflow as tf
+# pyrefly: ignore [missing-import]
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
 # Configuración inicial de Flask y CORS
