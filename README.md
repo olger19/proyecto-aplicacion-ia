@@ -1,4 +1,15 @@
 # Diagnóstico de Enfermedades en Hojas de Papa y Café mediante IA
+
+<div align="center">
+  <span><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /></span>
+  <span><img src="https://img.shields.io/badge/Flask-%23000000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" /></span>
+  <span><img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow" /></span>
+  <span><img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras" /></span>
+  <span><img src="https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" /></span>
+  <span><img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></span>
+  <span><img src="https://img.shields.io/badge/Tailwind_CSS_v4-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></span>
+</div>
+
 Este proyecto es una aplicación web fitosanitaria de precisión que permite cargar fotos de hojas de **Papa** y **Café**, clasificar su salud o identificar patologías específicas en segundos mediante modelos de Aprendizaje Profundo (Deep Learning), y proveer medidas de remediación agronómica recomendadas.
 
 ---
