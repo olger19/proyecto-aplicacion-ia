@@ -12,6 +12,10 @@
 
 Este proyecto es una aplicación web fitosanitaria de precisión que permite cargar fotos de hojas de **Papa** y **Café**, clasificar su salud o identificar patologías específicas en segundos mediante modelos de Aprendizaje Profundo (Deep Learning), y proveer medidas de remediación agronómica recomendadas.
 
+<p align="center">
+  <img src="preview.png" alt="Vista previa de AgroIA Leaf Clinic" width="800" />
+</p>
+
 ---
 
 ## 1. Contexto de la Solución y Técnica de IA
