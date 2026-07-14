@@ -1,5 +1,38 @@
 import React, { useRef, useState } from 'react';
 
+// Iconos de hojas representativos en formato SVG para reemplazar los emojis
+const IconoHojaPapa = () => (
+  <svg className="w-8 h-8 text-emerald-400 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    {/* Tallo central */}
+    <path d="M12 22V14" />
+    {/* Foliolo terminal principal */}
+    <path d="M12 2C9.5 5.5 9.5 11 12 14C14.5 11 14.5 5.5 12 2Z" fill="currentColor" fillOpacity="0.15" />
+    {/* Foliolo lateral izquierdo */}
+    <path d="M10 11.5C7 11 5.5 13.5 7.5 16C9.5 18.5 11 16 10 11.5Z" fill="currentColor" fillOpacity="0.15" />
+    {/* Foliolo lateral derecho */}
+    <path d="M14 11.5C17 11 18.5 13.5 16.5 16C14.5 18.5 13 16 14 11.5Z" fill="currentColor" fillOpacity="0.15" />
+  </svg>
+);
+
+const IconoHojaCafe = () => (
+  <svg className="w-8 h-8 text-amber-500 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    {/* Tallo */}
+    <path d="M12 22V20" />
+    {/* Hoja Elíptica Alargada de Café */}
+    <path d="M12 2C6 7 6 17 12 20C18 17 18 7 12 2Z" fill="currentColor" fillOpacity="0.15" />
+    {/* Nervaduras laterales características del café */}
+    <path d="M12 5C10 6.5 9 8.5 8.5 9.5" />
+    <path d="M12 5C14 6.5 15 8.5 15.5 9.5" />
+    <path d="M12 9C9.5 10.5 8.5 12.5 8 13.5" />
+    <path d="M12 9C14.5 10.5 15.5 12.5 16 13.5" />
+    <path d="M12 13C9.5 14.5 8.5 16.5 8 17.5" />
+    <path d="M12 13C14.5 14.5 15.5 16.5 16 17.5" />
+    {/* Nervadura central */}
+    <path d="M12 2V20" strokeWidth="1.2" opacity="0.6" />
+  </svg>
+);
+
+
 /**
  * FormularioDiagnostico Component
  * Maneja la selección del cultivo, la subida de imágenes y el trigger de predicción.
@@ -76,13 +109,13 @@ export default function FormularioDiagnostico({
             id="btn-crop-papa"
             onClick={() => setCultivo('papa')}
             disabled={loading}
-            className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all duration-300 text-left cursor-pointer ${
+            className={`group flex flex-col items-center gap-3 p-4 rounded-xl border transition-all duration-300 text-left cursor-pointer ${
               cultivo === 'papa'
                 ? 'border-emerald-500/80 bg-emerald-950/20 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.1)]'
                 : 'border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-slate-400 hover:text-slate-200'
             }`}
           >
-            <span className="text-2xl">🥔</span>
+            <IconoHojaPapa />
             <div className="text-center">
               <div className="font-bold text-sm">Cultivo de Papa</div>
               <div className="text-[10px] opacity-70">Solanum tuberosum</div>
@@ -94,13 +127,13 @@ export default function FormularioDiagnostico({
             id="btn-crop-cafe"
             onClick={() => setCultivo('cafe')}
             disabled={loading}
-            className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all duration-300 text-left cursor-pointer ${
+            className={`group flex flex-col items-center gap-3 p-4 rounded-xl border transition-all duration-300 text-left cursor-pointer ${
               cultivo === 'cafe'
                 ? 'border-amber-600 bg-amber-950/20 text-amber-300 shadow-[0_0_15px_rgba(217,119,6,0.1)]'
                 : 'border-slate-800 bg-slate-900/50 hover:bg-slate-900 text-slate-400 hover:text-slate-200'
             }`}
           >
-            <span className="text-2xl">☕</span>
+            <IconoHojaCafe />
             <div className="text-center">
               <div className="font-bold text-sm">Cultivo de Café</div>
               <div className="text-[10px] opacity-70">Coffea arabica</div>
@@ -186,7 +219,15 @@ export default function FormularioDiagnostico({
               disabled={loading}
               className="flex-1 py-2 px-3 text-xs bg-slate-900 border border-slate-800 hover:border-slate-700 hover:bg-slate-850 rounded-lg text-slate-300 font-semibold cursor-pointer transition-all duration-200"
             >
-              Muestra de Papa 🥔
+              <div className="flex items-center justify-center gap-1.5">
+                <svg className="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22V14" />
+                  <path d="M12 2C9.5 5.5 9.5 11 12 14C14.5 11 14.5 5.5 12 2Z" fill="currentColor" fillOpacity="0.15" />
+                  <path d="M10 11.5C7 11 5.5 13.5 7.5 16C9.5 18.5 11 16 10 11.5Z" />
+                  <path d="M14 11.5C17 11 18.5 13.5 16.5 16C14.5 18.5 13 16 14 11.5Z" />
+                </svg>
+                <span>Muestra de Papa</span>
+              </div>
             </button>
             <button
               type="button"
@@ -195,7 +236,14 @@ export default function FormularioDiagnostico({
               disabled={loading}
               className="flex-1 py-2 px-3 text-xs bg-slate-900 border border-slate-800 hover:border-slate-700 hover:bg-slate-850 rounded-lg text-slate-300 font-semibold cursor-pointer transition-all duration-200"
             >
-              Muestra de Café ☕
+              <div className="flex items-center justify-center gap-1.5">
+                <svg className="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22V20" />
+                  <path d="M12 2C6 7 6 17 12 20C18 17 18 7 12 2Z" fill="currentColor" fillOpacity="0.15" />
+                  <path d="M12 2V20" opacity="0.6" />
+                </svg>
+                <span>Muestra de Café</span>
+              </div>
             </button>
           </div>
         </div>
